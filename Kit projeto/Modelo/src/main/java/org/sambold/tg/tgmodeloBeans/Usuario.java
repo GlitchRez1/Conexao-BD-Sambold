@@ -1,5 +1,7 @@
 package org.sambold.tg.tgmodeloBeans;
 
+
+
 public class Usuario {
     private String email;
     private String senha;
@@ -13,7 +15,7 @@ public class Usuario {
     this.perfil = perfil;
     this.ativo = ativo;
 
-}
+}   
 
 
     public String getEmail() {

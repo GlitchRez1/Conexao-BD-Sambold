@@ -3,17 +3,34 @@ package org.sambold.tg;
 //mvn javafx:run (Teste se o javafx esta rodando)
 //mvn exec:java (Roda o projeto)
 
+import java.util.Scanner;
+
 import org.sambold.tg.tgmodeloBeans.Usuario;
+
 
 public class Main {
     public static void main(String[] args) {
         // Aqui estou criando um objeto do tipo usuário pra usar como exemplo
-        Usuario usuarioExemplo = new Usuario("joao.silva@email.com", "123456", "ALUNO",true);
+        
+        Scanner scan = new Scanner(System.in);
+        // Aqui o usuário ira colocar todas as informações
+        System.out.println("Digite o seu email:");
+        String email = scan.nextLine();
+        System.out.println("Digite sua senha:");
+        String senha = scan.nextLine();
+        System.out.println("Qual o seu Perfil?");
+        String perfil = scan.nextLine();
+        boolean isAtivo = true;
+        
 
+
+
+        Usuario usuario1 = new Usuario(email, senha, perfil, isAtivo);
         // Exibindo informações
-        System.out.println("Email: " + usuarioExemplo.getEmail());
-        System.out.println("Perfil: " + usuarioExemplo.getPerfil());
-        System.out.println("Usuário está Ativo? " + usuarioExemplo.isAtivo());
+        System.out.println("Email: " + email);
+        System.out.println("Senha " + senha);
+        System.out.println("Perfil: " + perfil);
+        
     }
 }
 
